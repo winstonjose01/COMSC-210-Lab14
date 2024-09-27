@@ -1,5 +1,6 @@
 # include <iostream>
 # include <random>
+# include <iomanip>
 using namespace std;
 
 class Color {
@@ -11,18 +12,8 @@ class Color {
     public:
         random_access_iterator_tag seed;
 
-        int getRed();
-        int getGreen();
-        int getBlue();
-        void setRGB(int r, int g, int b);
-        void printRGB(int r, int g, int b);
-        
-
-        Color(int r, int g, int b){
-            red = r;
-            green = g;
-            blue = b;
-        }
+        // Constructor
+        Color(){};
 
         void setRGB(int r, int g, int b){
             red = r;
@@ -30,18 +21,12 @@ class Color {
             blue = b;
         }
         
-        int getRed(){
-            return red;
-        }
-        int getGreen(){
-            return green;
-        }
-        int getBlue(){
-            return blue;
-        }
+        int getRed()    {return red;}
+        int getGreen()  {return green;}
+        int getBlue()   {return blue;}
 
         void printRGB (int r, int g, int b){
-            cout << setw(4) "-----" << setw(9) << "-----" << setw(10) 
+            cout << setw(4) << "-----" << setw(9) << "-----" << setw(10) << "-----" << setw(9) << "-----" << endl;
 
         }
         
@@ -53,9 +38,9 @@ int main(){
     mt19937 gen{seed()};
     uniform_real_distribution<> color_distr{0,255};
 
-    Color color1(0,0,0);
-    Color color2(0,0,0);
-    Color color3(0,0,0);
+    Color color1;
+    Color color2;
+    Color color3;
 
     color1.setRGB(color_distr(gen), color_distr(gen), color_distr(gen));
     color2.setRGB(color_distr(gen), color_distr(gen), color_distr(gen));
@@ -66,5 +51,5 @@ int main(){
     color3.printRGB(color3.getRed(), color3.getGreen(), color3.getBlue());
 
    
-    return 0
+    return 0;
 }
