@@ -53,10 +53,10 @@ int main(){
     
     // Set the red, green and blue colors for each Color object
     color1.setRed(color_distr(gen)); color1.setGreen(color_distr(gen)); color1.setBlue(color_distr(gen));
-    color2.setRGB(color_distr(gen), color_distr(gen), color_distr(gen));
-    color3.setRGB(color_distr(gen), color_distr(gen), color_distr(gen));
-    color4.setRGB(color_distr(gen), color_distr(gen), color_distr(gen));
-    color5.setRGB(color_distr(gen), color_distr(gen), color_distr(gen));
+    color2.setRed(color_distr(gen)); color2.setGreen(color_distr(gen)); color2.setBlue(color_distr(gen));
+    color3.setRed(color_distr(gen)); color3.setGreen(color_distr(gen)); color3.setBlue(color_distr(gen));
+    color4.setRed(color_distr(gen)); color4.setGreen(color_distr(gen)); color4.setBlue(color_distr(gen));
+    color5.setRed(color_distr(gen)); color5.setGreen(color_distr(gen)); color5.setBlue(color_distr(gen));
 
      // Print the header for the table
     cout << setw(4) << "Color" << setw(8) << "Red" << setw(11) << "Green" << setw(8) << "Blue" << endl;
