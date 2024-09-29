@@ -16,12 +16,12 @@ class Color {
     public:
         // Constructor
         Color(){};
-        // Set the private variables red, green and blue color
-        void setRGB(int r, int g, int b){
-            red = r;
-            green = g;
-            blue = b;
-        }
+        // Setter for private variable red
+        void setRed(int r)      { red = r;}
+        // Setter for private variable green
+        void setGreen(int g)    { green = g;}
+        // Setter for private variable blue
+        void setBlue(int b)     { blue = b;}
         // Returns the red private variable
         int getRed()    {return red;}
         // Returns the green private variable
@@ -52,7 +52,7 @@ int main(){
     Color color5;
     
     // Set the red, green and blue colors for each Color object
-    color1.setRGB(color_distr(gen), color_distr(gen), color_distr(gen));
+    color1.setRed(color_distr(gen)); color1.setGreen(color_distr(gen)); color1.setBlue(color_distr(gen));
     color2.setRGB(color_distr(gen), color_distr(gen), color_distr(gen));
     color3.setRGB(color_distr(gen), color_distr(gen), color_distr(gen));
     color4.setRGB(color_distr(gen), color_distr(gen), color_distr(gen));
@@ -68,8 +68,5 @@ int main(){
     color4.printRGB(4, color4.getRed(), color4.getGreen(), color4.getBlue());
     color5.printRGB(5, color5.getRed(), color5.getGreen(), color5.getBlue());
 
-
-
-   
     return 0;
 }
